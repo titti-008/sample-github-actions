@@ -19,5 +19,10 @@ jobs:
         run: | # If you want to list multiple commands, connect them with a (pipe)
           node -v
           npm -v
-
+      # Step 3
+      - name: exit 1
+        run: exit 1
+      # Step 4
+      - name: echo 4th string
+        run: echo "Hello world"
 
