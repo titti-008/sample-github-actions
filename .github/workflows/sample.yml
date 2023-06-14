@@ -1,0 +1,23 @@
+# Workflow name
+name: Shell Commands
+# Ivent trigger
+# Run this workflow on `git push`
+on: [push]
+
+jobs:
+  # job name (you can chaoose any name you like)
+  run-shell-command:
+    # Specify the format of the virtual machine
+    runs-on: ubuntu-latest
+    # Step of jobs
+    steps:
+      # Step 1 name
+      - name: echo a string
+        run: echo "Hello world"
+      # Step 2
+      - name: multiline script
+        run: | # If you want to list multiple commands, connect them with a (pipe)
+          node -v
+          npm -v
+
+
